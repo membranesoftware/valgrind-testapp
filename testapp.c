@@ -19,7 +19,12 @@ void fn2 () {
 }
 
 int main (int argc, char **argv) {
+	int exitcode;
+
 	fn1 ();
 	fn2 ();
-	exit (0);
+
+	// TODO: Initialize exitcode before referencing its value (currently leaving an error for detection by valgrind)
+	// exitcode = 0;
+	exit (exitcode);
 }
