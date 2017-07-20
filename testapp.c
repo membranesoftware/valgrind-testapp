@@ -1,6 +1,6 @@
 #include <stdlib.h>
 
-int main (int argc, char **argv) {
+void fn () {
 	int len, *array;
 
 	len = 8;
@@ -8,6 +8,9 @@ int main (int argc, char **argv) {
 
 	// TODO: Free this array (currently leaving a leak for detection by valgrind)
 	// free (array);
+}
 
+int main (int argc, char **argv) {
+	fn ();
 	exit (0);
 }
